@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twisted Kombucha - Premium Kombucha Drinks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="#home">
+                        <img src="images/home page/01 logo.png" alt="Twisted Kombucha Logo" class="logo-img">
+                    </a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                        <li><a href="#shop" class="nav-link">Shop</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#where-to-buy" class="nav-link">Where to buy</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Action Icons -->
+                <div class="action-icons">
+                    <button class="icon-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="icon-btn" aria-label="Account">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <a href="#cart" class="icon-btn" aria-label="Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-nav-list">
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+                <li><a href="#shop" class="mobile-nav-link">Shop</a></li>
+                <li><a href="#about" class="mobile-nav-link">About</a></li>
+                <li><a href="#where-to-buy" class="mobile-nav-link">Where to buy</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-carousel" id="heroCarousel">
+            <!-- Slide 1 -->
+            <div class="hero-slide active" style="background-image: url('images/Ginger Pineapple Cascade Hops.png')">
+                <div class="hero-content">
+                    <h1 class="hero-title">Ginger Pineapple Cascade Hops</h1>
+                    <p class="hero-description">A refreshing blend of ginger, pineapple, and cascade hops for a unique taste experience.</p>
+                    <div class="hero-price">£24.85</div>
+                    <a href="#shop" class="hero-btn">
+                        Shop Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide" style="background-image: url('images/Natural.jpg')">
+                <div class="hero-content">
+                    <h1 class="hero-title">Natural Original Raw Kombucha</h1>
+                    <p class="hero-description">Our classic original kombucha with pure, natural fermentation.</p>
+                    <div class="hero-price">£24.85</div>
+                    <a href="#shop" class="hero-btn">
+                        Shop Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide" style="background-image: url('images/Strawberry Hibiscus & Ginger.jpg')">
+                <div class="hero-content">
+                    <h1 class="hero-title">Strawberry Hibiscus & Ginger</h1>
+                    <p class="hero-description">A sweet and tangy blend of strawberry, hibiscus, and ginger.</p>
+                    <div class="hero-price">£24.85</div>
+                    <a href="#shop" class="hero-btn">
+                        Shop Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Navigation -->
+        <button class="carousel-btn carousel-prev" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-btn carousel-next" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Carousel Dots -->
+        <div class="carousel-dots" id="carouselDots">
+            <button class="dot active" data-slide="0"></button>
+            <button class="dot" data-slide="1"></button>
+            <button class="dot" data-slide="2"></button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="carousel-progress" id="carouselProgress"></div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product/prod-Ginger-Pineapple-Cascade-Hops.jpg" alt="Ginger Pineapple Cascade Hops">
+                        <div class="product-badge">Best Seller</div>
+                        <button class="quick-add-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Ginger Pineapple Cascade Hops</h3>
+                        <p class="product-description">A refreshing blend with a unique taste experience.</p>
+                        <div class="product-price">£24.85</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product/prod-Natural.jpg" alt="Natural Original Raw Kombucha">
+                        <div class="product-badge">Classic</div>
+                        <button class="quick-add-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Natural Original Raw Kombucha</h3>
+                        <p class="product-description">Pure, natural fermentation at its finest.</p>
+                        <div class="product-price">£24.85</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/product/prod-Strawberry-Hibiscus-Ginger.jpg" alt="Strawberry Hibiscus & Ginger">
+                        <div class="product-badge">Popular</div>
+                        <button class="quick-add-btn">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Strawberry Hibiscus & Ginger</h3>
+                        <p class="product-description">Sweet and tangy blend of natural flavors.</p>
+                        <div class="product-price">£24.85</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Kombucha Section -->
+    <section id="about-kombucha" class="about-kombucha">
+        <div class="container">
+            <div class="about-header">
+                <h2 class="about-title">LONDON'S PREMIUM ARTISAN KOMBUCHA</h2>
+                <p class="about-tagline">Make your gut happy with great tasting kombucha - tea with a twist!</p>
+            </div>
+            
+            <div class="about-grid">
+                <!-- Left Column -->
+                <div class="about-column">
+                    <!-- What is Kombucha -->
+                    <div class="about-card">
+                        <h3 class="card-title">WHAT IS KOMBUCHA?</h3>
+                        <div class="card-content">
+                            <div class="card-text">
+                                <p>If you're unfamiliar with kombucha, it is a fermented tea with probiotic cultures (gut loving biome), enzymes and trace nutrients used mainly for digestion and gut health.</p>
+                                <p>It's a functional health drink which is vegan, raw, low in sugar and made with 100% natural ingredients.</p>
+                            </div>
+                            <div class="card-illustration">
+                                <div class="illustration-circle">
+                                    <div class="bottle-center">KOMBUCHA</div>
+                                    <div class="ingredients">
+                                        <span class="fruit">🍋</span>
+                                        <span class="berries">🫐</span>
+                                        <span class="leaves">🌿</span>
+                                        <span class="bubbles">💧</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Why Choose Twisted Kombucha -->
+                    <div class="about-card">
+                        <h3 class="card-title">WHY CHOOSE TWISTED KOMBUCHA?</h3>
+                        <div class="card-content">
+                            <div class="card-text">
+                                <p>Twisted Kombucha was developed during my Masters in Food Science, carrying out microbiological, biochemical and analytical testing.</p>
+                                <p>After critically analysing kombucha in the laboratory I discovered the functional health benefits of the magical microbes created during fermentation.</p>
+                                <p>This validated the physiological roles kombucha plays to aid in healthy digestive and immune function.</p>
+                                <p class="founder">Lou Dillon - Founder, Food Scientist & Registered Nutritionist</p>
+                            </div>
+                            <div class="card-illustration">
+                                <div class="illustration-circle">
+                                    <div class="bottle-center">KOMBUCHA</div>
+                                    <div class="attributes">
+                                        <span class="gluten-free">🌾❌</span>
+                                        <span class="probiotic">🦠</span>
+                                        <span class="vegan">🌱</span>
+                                        <span class="low-sugar">🍬⬇️</span>
+                                        <span class="raw">🌿</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="about-column">
+                    <!-- How Does It Taste -->
+                    <div class="about-card">
+                        <h3 class="card-title">HOW DOES IT TASTE?</h3>
+                        <div class="card-content">
+                            <div class="card-text">
+                                <p>Kombucha's complex flavour profile is tangy, slightly sweet and wickedly refreshing. Not only that, it tastes fantastic!</p>
+                            </div>
+                            <div class="card-illustration">
+                                <div class="illustration-circle">
+                                    <div class="bottle-center">KOMBUCHA</div>
+                                    <div class="flavors">
+                                        <div class="flavor-item">
+                                            <span class="flavor-icon">🌸</span>
+                                            <span class="flavor-text">Floral</span>
+                                        </div>
+                                        <div class="flavor-item">
+                                            <span class="flavor-icon">🫐</span>
+                                            <span class="flavor-text">Fruity</span>
+                                        </div>
+                                        <div class="flavor-item">
+                                            <span class="flavor-icon">🌿</span>
+                                            <span class="flavor-text">Herbal</span>
+                                        </div>
+                                        <div class="flavor-item">
+                                            <span class="flavor-icon">🦠</span>
+                                            <span class="flavor-text">Yeasty</span>
+                                        </div>
+                                        <div class="flavor-item">
+                                            <span class="flavor-icon">🌶️</span>
+                                            <span class="flavor-text">Spicy</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Health Benefits -->
+                    <div class="about-card">
+                        <h3 class="card-title">WHAT ARE THE HEALTH BENEFITS?</h3>
+                        <div class="card-content">
+                            <div class="card-text">
+                                <p>This will give your body a treat because drinking this bubbly booch can improve your digestive function, rebalance your gut microbiome, detoxify your liver and support overall immune system health.</p>
+                                <p class="benefits-tagline">Bubbles with benefits!</p>
+                            </div>
+                            <div class="card-illustration">
+                                <div class="illustration-circle">
+                                    <div class="bottle-center">KOMBUCHA</div>
+                                    <div class="health-benefits">
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">🛡️</span>
+                                            <span class="benefit-text">Antioxidant</span>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">⚖️</span>
+                                            <span class="benefit-text">Helps weight loss</span>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">🧹</span>
+                                            <span class="benefit-text">Detoxification</span>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">🛡️</span>
+                                            <span class="benefit-text">Immune Support</span>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <span class="benefit-icon">⚡</span>
+                                            <span class="benefit-text">Boost Energy</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- How It's Made -->
+                    <div class="about-card">
+                        <h3 class="card-title">HOW IT'S MADE?</h3>
+                        <div class="card-content">
+                            <div class="card-text">
+                                <p>Kombucha is an all-natural traditionally fermented beverage, produced in the authentic old fashioned way. It starts with a pot of sweet tea brewed with loose leaves and a SCOBY. It's left to spontaneously ferment for a few weeks resulting in a tangy, sweet beverage which delights your senses, and is filled with living nutrition that invigorates your body.</p>
+                                <p>We do not adulterate our kombucha in any way. That defeats the purpose of drinking kombucha for 'live probiotic' benefits.</p>
+                            </div>
+                            <div class="card-illustration">
+                                <div class="brewing-process">
+                                    <div class="process-step">
+                                        <div class="step-icon">🫖</div>
+                                        <div class="step-text">Organic Tea + Filtered Water</div>
+                                    </div>
+                                    <div class="process-arrow">↓</div>
+                                    <div class="process-step">
+                                        <div class="step-icon">🍯</div>
+                                        <div class="step-text">Add Organic Cane Sugar</div>
+                                    </div>
+                                    <div class="process-arrow">↓</div>
+                                    <div class="process-step">
+                                        <div class="step-icon">🫙</div>
+                                        <div class="step-text">Ferment 7-10 days with SCOBY</div>
+                                    </div>
+                                    <div class="process-arrow">↓</div>
+                                    <div class="process-step">
+                                        <div class="step-icon">🥤</div>
+                                        <div class="step-text">Delicious Kombucha Ready!</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OTHER</h3>
+                    <ul>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Refunds and Returns</a></li>
+                        <li><a href="#">Shipping Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>BREWERY</h3>
+                    <p>Unit 14, Cooper Road Estate<br>01 Cooper Road<br>London</p>
+                </div>
+                <div class="footer-section">
+                    <h3>OPEN HOURS</h3>
+                    <p>Monday - Friday: 9am - 6pm<br>Saturday: 10am - 4pm<br>Sunday: Closed</p>
+                </div>
+                <div class="footer-section">
+                    <h3>CONTACT US</h3>
+                    <p><i class="fas fa-phone"></i> 020 7123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@twistedkombucha.co.uk</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Twisted Kombucha.</p>
+                <p>Designed and Built by <a href="https://paul-banning.com" target="_blank">Paul Banning</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
