@@ -75,7 +75,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #f59e0b;
+    color: #10b981;
 }
 
 .action-icons {
@@ -329,69 +329,360 @@ body {
     transition: width 0.3s ease;
 }
 
-/* Products Section */
-.products {
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #10b981;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Crafted with Purpose Section */
+.crafted-purpose {
     padding: 5rem 0;
     background: #f8fafc;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 3rem;
-    color: #1f2937;
-}
-
-.products-grid {
+.features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    margin-top: 3rem;
 }
 
-.product-card {
+.feature-card {
+    text-align: center;
+    padding: 2rem;
     background: white;
     border-radius: 1rem;
-    overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
-.product-card:hover {
+.feature-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.product-image {
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.feature-icon.science-backed {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.feature-icon.live-probiotics {
+    background: linear-gradient(135deg, #ec4899, #be185d);
+}
+
+.feature-icon.low-sugar {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.feature-icon.hand-crafted {
+    background: linear-gradient(135deg, #1f2937, #374151);
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/* What Makes Our Kombucha Special Section */
+.what-makes-special {
+    padding: 5rem 0;
+    background: white;
+}
+
+.special-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.special-text h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #10b981;
+    margin-bottom: 1.5rem;
+}
+
+.special-text p {
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.attributes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.attribute {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.special-illustration {
+    display: flex;
+    justify-content: center;
+}
+
+.infographic {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid #e5e7eb;
     position: relative;
+    max-width: 400px;
+}
+
+.ingredient-item, .fermentation, .final-product {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ingredient-icon, .fermentation-icon, .bottle-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    text-align: center;
+}
+
+.final-product {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    font-weight: 600;
+}
+
+/* Our Traditional Process Section */
+.traditional-process {
+    padding: 5rem 0;
+    background: #f8fafc;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.process-step {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #10b981;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto 1.5rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.step-icon.brew {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.step-icon.ferment {
+    background: linear-gradient(135deg, #ec4899, #be185d);
+}
+
+.step-icon.flavor {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.process-step h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.process-step p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.process-result {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.process-result p {
+    font-size: 1.25rem;
+    color: #374151;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Choose Your Flavor Section */
+.choose-flavor {
+    padding: 5rem 0;
+    background: white;
+    position: relative;
+}
+
+.flavor-carousel {
+    position: relative;
+    overflow: hidden;
+    margin: 3rem 0;
+}
+
+.flavor-slide {
+    display: none;
+    justify-content: center;
+}
+
+.flavor-slide.active {
+    display: flex;
+}
+
+.flavor-card {
+    max-width: 400px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.flavor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.flavor-card.pink {
+    background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+}
+
+.flavor-card.purple {
+    background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
+}
+
+.flavor-card.orange {
+    background: linear-gradient(135deg, #fed7aa, #fdba74);
+}
+
+.flavor-image {
     height: 250px;
     overflow: hidden;
 }
 
-.product-image img {
+.flavor-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
 }
 
-.product-card:hover .product-image img {
-    transform: scale(1.05);
+.flavor-info {
+    padding: 2rem;
+    position: relative;
 }
 
-.product-badge {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: linear-gradient(135deg, #f59e0b, #f97316);
+.flavor-info h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.flavor-info p {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.flavor-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #10b981;
+    margin-bottom: 1.5rem;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    background: #10b981;
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
-    font-size: 0.875rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
     font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
 }
 
-.quick-add-btn {
+.add-to-cart-btn:hover {
+    background: #059669;
+    transform: translateY(-2px);
+}
+
+.favorite-btn {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -404,285 +695,324 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    opacity: 0;
-    transform: scale(0.8);
+    color: #ec4899;
     transition: all 0.3s ease;
 }
 
-.product-card:hover .quick-add-btn {
-    opacity: 1;
-    transform: scale(1);
+.favorite-btn:hover {
+    transform: scale(1.1);
+    color: #be185d;
 }
 
-.product-info {
-    padding: 1.5rem;
+/* Flavor Carousel Navigation */
+.flavor-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 2px solid #e5e7eb;
+    color: #374151;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
-.product-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #1f2937;
-}
-
-.product-description {
-    color: #6b7280;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-}
-
-.product-price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #f59e0b;
-    margin-bottom: 1rem;
-}
-
-.add-to-cart-btn {
-    width: 100%;
-    background: linear-gradient(135deg, #f59e0b, #f97316);
+.flavor-nav-btn:hover {
+    background: #10b981;
     color: white;
+    border-color: #10b981;
+}
+
+.flavor-nav-btn.prev {
+    left: 2rem;
+}
+
+.flavor-nav-btn.next {
+    right: 2rem;
+}
+
+.flavor-dots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.flavor-dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #d1d5db;
     border: none;
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.add-to-cart-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+.flavor-dot.active {
+    background: #10b981;
+    transform: scale(1.2);
 }
 
-/* About Kombucha Section */
-.about-kombucha {
+/* Try All Flavors Section */
+.try-all-flavors {
     padding: 5rem 0;
-    background: #ffffff;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
 }
 
-.about-header {
+.mixed-case-content {
     text-align: center;
-    margin-bottom: 4rem;
-}
-
-.about-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #10b981;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.about-tagline {
-    font-size: 1.25rem;
-    color: #6b7280;
-    font-style: italic;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    max-width: 1000px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
-.about-column {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.about-card {
-    background: #f8fafc;
-    border-radius: 1rem;
-    padding: 2rem;
-    border: 1px solid #e5e7eb;
-    transition: all 0.3s ease;
-}
-
-.about-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.card-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #10b981;
+.mixed-case-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
     margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-.card-content {
+.mixed-case-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.mixed-case-buttons {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.card-text p {
-    color: #374151;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
-
-.founder {
-    font-weight: 600;
-    color: #10b981;
-    font-style: italic;
-    margin-top: 1rem;
-}
-
-.benefits-tagline {
-    font-weight: 600;
-    color: #f59e0b;
-    font-size: 1.1rem;
-}
-
-/* Illustration Styles */
-.card-illustration {
-    display: flex;
+    gap: 1rem;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
-.illustration-circle {
-    position: relative;
-    width: 120px;
-    height: 120px;
+/* Try Today Section */
+.try-today {
+    padding: 5rem 0;
+    background: #f8fafc;
+}
+
+.try-today-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.try-today-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.try-today-content p {
+    font-size: 1.25rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.try-today-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn-primary {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #10b981;
     border: 2px solid #10b981;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background: #10b981;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Our Promise Section */
+.our-promise {
+    padding: 5rem 0;
+    background: white;
+}
+
+.promise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.promise-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.promise-icon {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(16, 185, 129, 0.1);
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: white;
 }
 
-.bottle-center {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: #10b981;
-    text-align: center;
-    line-height: 1.2;
+.promise-card:nth-child(1) .promise-icon {
+    background: linear-gradient(135deg, #ec4899, #be185d);
 }
 
-.ingredients, .attributes, .flavors, .health-benefits {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.promise-card:nth-child(2) .promise-icon {
+    background: linear-gradient(135deg, #10b981, #059669);
 }
 
-.ingredients span, .attributes span {
-    position: absolute;
-    font-size: 1.2rem;
+.promise-card:nth-child(3) .promise-icon {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
 }
 
-.ingredients .fruit { top: 10%; left: 10%; }
-.ingredients .berries { top: 10%; right: 10%; }
-.ingredients .leaves { bottom: 10%; left: 10%; }
-.ingredients .bubbles { bottom: 10%; right: 10%; }
+.promise-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+}
 
-.attributes .gluten-free { top: 5%; left: 5%; font-size: 1rem; }
-.attributes .probiotic { top: 5%; right: 5%; }
-.attributes .vegan { bottom: 5%; left: 5%; }
-.attributes .low-sugar { bottom: 5%; right: 5%; font-size: 1rem; }
-.attributes .raw { top: 50%; left: -10%; transform: translateY(-50%); }
+/* Testimonials Section */
+.testimonials {
+    padding: 5rem 0;
+    background: #f8fafc;
+    position: relative;
+}
 
-.flavors, .health-benefits {
+.testimonials-carousel {
+    position: relative;
+    overflow: hidden;
+    margin: 3rem 0;
+}
+
+.testimonial-slide {
+    display: none;
+    justify-content: center;
+}
+
+.testimonial-slide.active {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 0.5rem;
 }
 
-.flavor-item, .benefit-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.75rem;
-    color: #374151;
-}
-
-.flavor-icon, .benefit-icon {
-    font-size: 1rem;
-}
-
-/* Brewing Process */
-.brewing-process {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.process-step {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.testimonial-card {
+    max-width: 500px;
     background: white;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    min-width: 200px;
-}
-
-.step-icon {
-    font-size: 1.5rem;
-    width: 40px;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.step-text {
-    font-size: 0.875rem;
+.stars {
+    color: #f59e0b;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-card p {
+    font-size: 1.125rem;
     color: #374151;
-    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-style: italic;
 }
 
-.process-arrow {
-    font-size: 1.5rem;
-    color: #10b981;
-    font-weight: bold;
+.testimonial-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #6b7280;
+    font-size: 0.875rem;
 }
 
-/* Responsive Design for About Section */
-@media (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .about-title {
-        font-size: 2rem;
-    }
-    
-    .about-card {
-        padding: 1.5rem;
-    }
-    
-    .card-content {
-        flex-direction: column;
-    }
-    
-    .illustration-circle {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .bottle-center {
-        font-size: 0.65rem;
-    }
-    
-    .process-step {
-        min-width: 150px;
-        padding: 0.75rem;
-    }
-    
-    .step-text {
-        font-size: 0.8rem;
-    }
+.author-name {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/* Testimonials Navigation */
+.testimonial-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 2px solid #e5e7eb;
+    color: #374151;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.testimonial-nav-btn:hover {
+    background: #10b981;
+    color: white;
+    border-color: #10b981;
+}
+
+.testimonial-nav-btn.prev {
+    left: 2rem;
+}
+
+.testimonial-nav-btn.next {
+    right: 2rem;
+}
+
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.testimonial-dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #d1d5db;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.testimonial-dot.active {
+    background: #10b981;
+    transform: scale(1.2);
 }
 
 /* Footer */
@@ -734,11 +1064,28 @@ body {
     color: #f59e0b;
 }
 
+.trustpilot-link {
+    display: inline-flex;
+    align-items: center;
+    color: #d1d5db;
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+
+.trustpilot-link:hover {
+    color: white;
+}
+
 .footer-bottom {
     border-top: 1px solid #374151;
     padding-top: 1rem;
     text-align: center;
     color: #9ca3af;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .footer-bottom a {
@@ -748,6 +1095,21 @@ body {
 }
 
 .footer-bottom a:hover {
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: #d1d5db;
+    font-size: 1.25rem;
+    transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
     color: white;
 }
 
@@ -789,13 +1151,43 @@ body {
         right: 1rem;
     }
     
-    .products-grid {
+    .special-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .promise-grid {
         grid-template-columns: 1fr;
     }
     
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .flavor-nav-btn, .testimonial-nav-btn {
+        padding: 0.75rem;
+    }
+    
+    .flavor-nav-btn.prev, .testimonial-nav-btn.prev {
+        left: 1rem;
+    }
+    
+    .flavor-nav-btn.next, .testimonial-nav-btn.next {
+        right: 1rem;
     }
 }
 
@@ -814,5 +1206,15 @@ body {
     
     .section-title {
         font-size: 2rem;
+    }
+    
+    .mixed-case-buttons, .try-today-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 300px;
     }
 }

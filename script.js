@@ -135,16 +135,151 @@ class HeroCarousel {
     }
 }
 
-// Product card interactions
-document.querySelectorAll('.product-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-10px)';
-    });
+// Flavor Carousel
+class FlavorCarousel {
+    constructor() {
+        this.currentSlide = 0;
+        this.slides = document.querySelectorAll('.flavor-slide');
+        this.dots = document.querySelectorAll('.flavor-dot');
+        this.prevBtn = document.getElementById('flavorPrevBtn');
+        this.nextBtn = document.getElementById('flavorNextBtn');
+        this.totalSlides = this.slides.length;
+        
+        this.init();
+    }
     
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0)';
-    });
-});
+    init() {
+        this.setupEventListeners();
+    }
+    
+    setupEventListeners() {
+        // Previous button
+        this.prevBtn.addEventListener('click', () => {
+            this.prevSlide();
+        });
+        
+        // Next button
+        this.nextBtn.addEventListener('click', () => {
+            this.nextSlide();
+        });
+        
+        // Dot navigation
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                this.goToSlide(index);
+            });
+        });
+    }
+    
+    goToSlide(index) {
+        // Remove active class from current slide and dot
+        this.slides[this.currentSlide].classList.remove('active');
+        this.dots[this.currentSlide].classList.remove('active');
+        
+        // Update current slide
+        this.currentSlide = index;
+        
+        // Add active class to new slide and dot
+        this.slides[this.currentSlide].classList.add('active');
+        this.dots[this.currentSlide].classList.add('active');
+    }
+    
+    nextSlide() {
+        const next = (this.currentSlide + 1) % this.totalSlides;
+        this.goToSlide(next);
+    }
+    
+    prevSlide() {
+        const prev = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+        this.goToSlide(prev);
+    }
+}
+
+// Testimonials Carousel
+class TestimonialsCarousel {
+    constructor() {
+        this.currentSlide = 0;
+        this.slides = document.querySelectorAll('.testimonial-slide');
+        this.dots = document.querySelectorAll('.testimonial-dot');
+        this.prevBtn = document.getElementById('testimonialPrevBtn');
+        this.nextBtn = document.getElementById('testimonialNextBtn');
+        this.totalSlides = this.slides.length;
+        this.autoPlayInterval = null;
+        this.slideDuration = 4000; // 4 seconds
+        
+        this.init();
+    }
+    
+    init() {
+        this.setupEventListeners();
+        this.startAutoPlay();
+    }
+    
+    setupEventListeners() {
+        // Previous button
+        this.prevBtn.addEventListener('click', () => {
+            this.prevSlide();
+        });
+        
+        // Next button
+        this.nextBtn.addEventListener('click', () => {
+            this.nextSlide();
+        });
+        
+        // Dot navigation
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                this.goToSlide(index);
+            });
+        });
+        
+        // Pause auto-play on hover
+        const carousel = document.getElementById('testimonialsCarousel');
+        carousel.addEventListener('mouseenter', () => {
+            this.stopAutoPlay();
+        });
+        
+        carousel.addEventListener('mouseleave', () => {
+            this.startAutoPlay();
+        });
+    }
+    
+    goToSlide(index) {
+        // Remove active class from current slide and dot
+        this.slides[this.currentSlide].classList.remove('active');
+        this.dots[this.currentSlide].classList.remove('active');
+        
+        // Update current slide
+        this.currentSlide = index;
+        
+        // Add active class to new slide and dot
+        this.slides[this.currentSlide].classList.add('active');
+        this.dots[this.currentSlide].classList.add('active');
+    }
+    
+    nextSlide() {
+        const next = (this.currentSlide + 1) % this.totalSlides;
+        this.goToSlide(next);
+    }
+    
+    prevSlide() {
+        const prev = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+        this.goToSlide(prev);
+    }
+    
+    startAutoPlay() {
+        this.autoPlayInterval = setInterval(() => {
+            this.nextSlide();
+        }, this.slideDuration);
+    }
+    
+    stopAutoPlay() {
+        if (this.autoPlayInterval) {
+            clearInterval(this.autoPlayInterval);
+            this.autoPlayInterval = null;
+        }
+    }
+}
 
 // Add to cart functionality
 document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
@@ -152,9 +287,8 @@ document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
         e.preventDefault();
         
         // Get product info
-        const card = btn.closest('.product-card');
-        const productName = card.querySelector('.product-name').textContent;
-        const productPrice = card.querySelector('.product-price').textContent;
+        const card = btn.closest('.flavor-card') || btn.closest('.product-card');
+        const productName = card.querySelector('h3').textContent;
         
         // Update cart count
         const cartCount = document.querySelector('.cart-count');
@@ -166,23 +300,38 @@ document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
     });
 });
 
-// Quick add functionality
-document.querySelectorAll('.quick-add-btn').forEach(btn => {
+// Favorite button functionality
+document.querySelectorAll('.favorite-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
         
-        // Get product info
-        const card = btn.closest('.product-card');
-        const productName = card.querySelector('.product-name').textContent;
+        const icon = btn.querySelector('i');
+        if (icon.classList.contains('fas')) {
+            icon.classList.remove('fas');
+            icon.classList.add('far');
+            showNotification('Removed from favorites');
+        } else {
+            icon.classList.remove('far');
+            icon.classList.add('fas');
+            showNotification('Added to favorites');
+        }
+    });
+});
+
+// Button click handlers
+document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const text = btn.textContent.trim();
         
-        // Update cart count
-        const cartCount = document.querySelector('.cart-count');
-        const currentCount = parseInt(cartCount.textContent) || 0;
-        cartCount.textContent = currentCount + 1;
-        
-        // Show success message
-        showNotification(`${productName} added to cart!`);
+        if (text.includes('Shop')) {
+            showNotification('Redirecting to shop...');
+        } else if (text.includes('Subscribe')) {
+            showNotification('Subscription feature coming soon!');
+        } else if (text.includes('Learn More')) {
+            showNotification('Learn more feature coming soon!');
+        }
     });
 });
 
@@ -240,9 +389,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Initialize carousel when DOM is loaded
+// Initialize carousels when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new HeroCarousel();
+    new FlavorCarousel();
+    new TestimonialsCarousel();
 });
 
 // Add loading animation
@@ -273,6 +424,36 @@ style.textContent = `
         to {
             transform: translateX(0);
         }
+    }
+    
+    /* Add hover effects for feature cards */
+    .feature-card {
+        cursor: pointer;
+    }
+    
+    .feature-card:hover .feature-icon {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+    
+    /* Add hover effects for promise cards */
+    .promise-card {
+        cursor: pointer;
+    }
+    
+    .promise-card:hover .promise-icon {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+    
+    /* Add hover effects for process steps */
+    .process-step {
+        cursor: pointer;
+    }
+    
+    .process-step:hover .step-icon {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
     }
 `;
 document.head.appendChild(style);
