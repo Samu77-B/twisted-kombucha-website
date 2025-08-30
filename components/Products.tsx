@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ShoppingCart, Heart } from 'lucide-react'
+import { ShoppingCart, Heart, Star } from 'lucide-react'
 import { useState } from 'react'
 import { useCart } from '@/contexts/CartContext'
 
@@ -12,7 +12,7 @@ const products = [
     price: 24.85,
     subscriptionPrice: 22.37,
     image: '/images/product/prod-Ginger-Pineapple-Cascade-Hops.jpg',
-    color: 'bg-kombucha-orange',
+    color: 'bg-gradient-to-br from-pink-400 to-pink-600',
     description: 'A refreshing blend of ginger, pineapple, and cascade hops for a unique taste experience.',
     variants: [
       { name: 'Single Bottle', price: 24.85, subscriptionPrice: 22.37 },
@@ -25,7 +25,7 @@ const products = [
     price: 24.85,
     subscriptionPrice: 22.37,
     image: '/images/product/prod-Hibiscus-Lavender.jpg',
-    color: 'bg-kombucha-purple',
+    color: 'bg-gradient-to-br from-purple-400 to-purple-600',
     description: 'A floral and calming combination of hibiscus and lavender.',
     variants: [
       { name: 'Single Bottle', price: 24.85, subscriptionPrice: 22.37 },
@@ -38,7 +38,7 @@ const products = [
     price: 24.85,
     subscriptionPrice: 22.37,
     image: '/images/product/prod-Strawberry-Hibiscus-Ginger.jpg',
-    color: 'bg-kombucha-pink',
+    color: 'bg-gradient-to-br from-orange-400 to-orange-600',
     description: 'A sweet and tangy blend of strawberry, hibiscus, and ginger.',
     variants: [
       { name: 'Single Bottle', price: 24.85, subscriptionPrice: 22.37 },
@@ -51,7 +51,7 @@ const products = [
     price: 24.85,
     subscriptionPrice: 22.37,
     image: '/images/product/prod-Natural.jpg',
-    color: 'bg-kombucha-green',
+    color: 'bg-gradient-to-br from-green-400 to-green-600',
     description: 'Our classic original kombucha with pure, natural fermentation.',
     variants: [
       { name: 'Single Bottle', price: 24.85, subscriptionPrice: 22.37 },
@@ -77,15 +77,8 @@ export default function Products() {
     })
   }
 
-  const backgroundColors = [
-    'bg-kombucha-pink',
-    'bg-kombucha-green', 
-    'bg-kombucha-orange',
-    'bg-gray-900'
-  ]
-
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -94,20 +87,22 @@ export default function Products() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-kombucha-green rounded-full"></span>
-            Our Products
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-6 border border-green-200">
+            <span className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></span>
+            Premium Products
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Choose Your
-            <span className="block text-kombucha-green">Flavor</span>
+            <span className="block bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+              Flavor
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Each bottle is carefully crafted with live cultures and organic ingredients for the perfect balance of taste and wellness.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
@@ -117,88 +112,77 @@ export default function Products() {
               viewport={{ once: true }}
               className="group"
             >
-              {/* Product Card with Colored Background */}
-              <div className={`${backgroundColors[index]} rounded-3xl p-8 text-white relative overflow-hidden mb-4 aspect-square flex flex-col justify-between`}>
-                {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute top-4 right-4 w-20 h-20 border-2 border-white rounded-full"></div>
-                  <div className="absolute bottom-4 left-4 w-12 h-12 border-2 border-white rounded-full"></div>
-                </div>
-                
-                {/* Product Image */}
-                <div className="relative z-10 flex-1 flex items-center justify-center">
+              {/* Product Card */}
+              <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                {/* Product Image - Full Width */}
+                <div className="relative h-72 bg-gradient-to-br from-gray-100 to-gray-200">
                   <img 
                     src={product.image} 
                     alt={product.name}
-                    className="w-32 h-40 object-contain group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                </div>
-                
-                {/* Price Badge */}
-                <div className="relative z-10 flex justify-between items-end">
-                  <div>
-                    <div className="text-2xl font-bold">£{product.price}</div>
-                    <div className="text-white/80 text-sm">per bottle</div>
+                  
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                  
+                  {/* Rating Badge */}
+                  <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1 flex items-center gap-1">
+                    <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                    <span className="text-xs font-medium text-gray-900">4.9</span>
                   </div>
+                  
+                  {/* Price Badge */}
+                  <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2">
+                    <div className="text-lg font-bold text-gray-900">£{product.price}</div>
+                  </div>
+                  
+                  {/* Quick Add Button */}
                   <button 
                     onClick={() => handleAddToCart(product.id, selectedProducts[product.id] || 0)}
-                    className="w-12 h-12 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-200"
-                    aria-label="Add to cart"
+                    className="absolute bottom-4 right-4 w-12 h-12 bg-white/95 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center hover:bg-white hover:scale-110 transition-all duration-200 opacity-0 group-hover:opacity-100"
+                    aria-label="Quick add to cart"
                   >
-                    <ShoppingCart className="h-5 w-5" />
+                    <ShoppingCart className="h-5 w-5 text-gray-700" />
                   </button>
                 </div>
-              </div>
 
-              {/* Product Info */}
-              <div className="space-y-3">
-                <h3 className="text-lg font-bold text-gray-900 leading-tight">
-                  {product.name}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {product.description}
-                </p>
-                
-                {/* Quick Actions */}
-                <div className="flex items-center gap-2">
-                  <button className="flex-1 bg-gray-900 text-white py-2.5 px-4 rounded-xl text-sm font-medium hover:bg-gray-800 transition-colors">
-                    Add to Cart
-                  </button>
-                  <button 
-                    className="p-2.5 border border-gray-200 rounded-xl hover:border-gray-300 transition-colors"
-                    aria-label="Add to wishlist"
-                  >
-                    <Heart className="h-4 w-4 text-gray-600" />
-                  </button>
+                {/* Product Info with Gradient Background */}
+                <div className={`${product.color} p-6 text-white relative overflow-hidden`}>
+                  {/* Background Pattern */}
+                  <div className="absolute inset-0 opacity-10">
+                    <div className="absolute top-2 right-2 w-16 h-16 border-2 border-white rounded-full"></div>
+                    <div className="absolute bottom-2 left-2 w-8 h-8 border-2 border-white rounded-full"></div>
+                  </div>
+                  
+                  <div className="relative z-10">
+                    <h3 className="text-lg font-bold leading-tight mb-2">
+                      {product.name}
+                    </h3>
+                    <p className="text-white/90 text-sm leading-relaxed mb-4">
+                      {product.description}
+                    </p>
+                    
+                    {/* Quick Actions */}
+                    <div className="flex items-center gap-3">
+                      <button 
+                        onClick={() => handleAddToCart(product.id, selectedProducts[product.id] || 0)}
+                        className="flex-1 bg-white/20 backdrop-blur-sm border border-white/30 text-white py-3 px-4 rounded-xl text-sm font-semibold hover:bg-white/30 hover:border-white/50 transition-all duration-200 group/btn"
+                      >
+                        <span className="group-hover/btn:translate-x-1 transition-transform inline-block">Add to Cart</span>
+                      </button>
+                      <button 
+                        className="p-3 border border-white/30 rounded-xl hover:bg-white/20 hover:border-white/50 transition-all duration-200 group/heart"
+                        aria-label="Add to wishlist"
+                      >
+                        <Heart className="h-4 w-4 text-white group-hover/heart:scale-110 transition-transform" />
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* Product Grid - Alternative Layout */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16"
-        >
-          {products.map((product, index) => (
-            <div key={`alt-${product.id}`} className="group cursor-pointer">
-              <div className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors aspect-square flex flex-col items-center justify-center">
-                <img 
-                  src={product.image} 
-                  alt={product.name}
-                  className="w-20 h-24 object-contain mb-4 group-hover:scale-110 transition-transform duration-300"
-                />
-                <h4 className="text-sm font-medium text-gray-900 text-center leading-tight">
-                  {product.name.split(' ').slice(0, 2).join(' ')}
-                </h4>
-              </div>
-            </div>
-          ))}
-        </motion.div>
 
         {/* CTA Section */}
         <motion.div
@@ -208,7 +192,7 @@ export default function Products() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="bg-gray-50 rounded-3xl p-12 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-12 max-w-4xl mx-auto border border-gray-200 shadow-lg">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
               Want to Try All Flavors?
             </h3>
@@ -216,10 +200,10 @@ export default function Products() {
               Get our mixed case and discover your favorite kombucha flavor with our variety pack.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gray-900 text-white px-8 py-4 rounded-xl font-medium text-lg hover:bg-gray-800 transition-colors">
+              <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg hover:scale-105 transition-all duration-200">
                 Shop Mixed Case
               </button>
-              <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-medium text-lg hover:border-gray-900 hover:text-gray-900 transition-all">
+              <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-green-600 hover:text-green-600 transition-all duration-200">
                 Subscribe & Save 10%
               </button>
             </div>

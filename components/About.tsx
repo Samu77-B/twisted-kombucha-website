@@ -36,11 +36,11 @@ export default function About() {
             className="text-center"
           >
             <div className="w-16 h-16 bg-kombucha-green rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <img 
-                src="/images/home page/backed-by-science-300x300.png" 
-                alt="Science backed"
-                className="w-10 h-10"
-              />
+                              <img 
+                  src="/images/home%20page/backed-by-science-300x300.png" 
+                  alt="Science backed"
+                  className="w-10 h-10"
+                />
             </div>
             <h3 className="text-lg font-bold text-gray-900 mb-2">Science Backed</h3>
             <p className="text-gray-600 text-sm">Developed during Masters in Food Science research</p>
@@ -55,7 +55,7 @@ export default function About() {
           >
             <div className="w-16 h-16 bg-kombucha-pink rounded-2xl flex items-center justify-center mx-auto mb-4">
               <img 
-                src="/images/home page/probiotic-300x300.png" 
+                src="/images/home%20page/probiotic-300x300.png" 
                 alt="Live probiotics"
                 className="w-10 h-10"
               />
@@ -73,7 +73,7 @@ export default function About() {
           >
             <div className="w-16 h-16 bg-kombucha-orange rounded-2xl flex items-center justify-center mx-auto mb-4">
               <img 
-                src="/images/home page/low-sugar-300x300.png" 
+                src="/images/home%20page/low-sugar-300x300.png" 
                 alt="Low sugar"
                 className="w-10 h-10"
               />
@@ -91,7 +91,7 @@ export default function About() {
           >
             <div className="w-16 h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <img 
-                src="/images/home page/hand-crafted-300x300.png" 
+                src="/images/home%20page/hand-crafted-300x300.png" 
                 alt="Hand crafted"
                 className="w-10 h-10"
               />
@@ -162,7 +162,7 @@ export default function About() {
               <div className="absolute -inset-4 bg-gradient-to-br from-kombucha-green/20 to-kombucha-blue/20 rounded-3xl blur-xl"></div>
               <div className="relative bg-white rounded-2xl p-8 shadow-2xl">
                 <img 
-                  src="/images/home page/how-it-made.png" 
+                  src="/images/home%20page/how-it-made.png" 
                   alt="How kombucha is made"
                   className="w-full h-auto rounded-xl"
                 />

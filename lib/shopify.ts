@@ -206,7 +206,7 @@ export const ADD_TO_CART = `
 export async function getProducts(first: number = 10) {
   try {
     const variables = { first }
-    const data = await shopifyClient.request(GET_PRODUCTS, variables)
+    const data = await shopifyClient.request(GET_PRODUCTS, variables) as any
     return data.products
   } catch (error) {
     console.error('Error fetching products:', error)
@@ -217,7 +217,7 @@ export async function getProducts(first: number = 10) {
 export async function getProductByHandle(handle: string) {
   try {
     const variables = { handle }
-    const data = await shopifyClient.request(GET_PRODUCT_BY_HANDLE, variables)
+    const data = await shopifyClient.request(GET_PRODUCT_BY_HANDLE, variables) as any
     return data.product
   } catch (error) {
     console.error('Error fetching product:', error)
@@ -237,7 +237,7 @@ export async function createCart(variantId: string, quantity: number = 1) {
         ],
       },
     }
-    const data = await shopifyClient.request(CREATE_CART, variables)
+    const data = await shopifyClient.request(CREATE_CART, variables) as any
     return data.cartCreate
   } catch (error) {
     console.error('Error creating cart:', error)
@@ -256,7 +256,7 @@ export async function addToCart(cartId: string, variantId: string, quantity: num
         },
       ],
     }
-    const data = await shopifyClient.request(ADD_TO_CART, variables)
+    const data = await shopifyClient.request(ADD_TO_CART, variables) as any
     return data.cartLinesAdd
   } catch (error) {
     console.error('Error adding to cart:', error)
