@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twisted Kombucha - Premium Kombucha Drinks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="#home">
+                        <img src="images/home page/01 logo.png" alt="Twisted Kombucha Logo" class="logo-img">
+                    </a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                        <li><a href="#faq" class="nav-link">FAQ</a></li>
+                        <li><a href="#where-to-buy" class="nav-link">Where to Buy</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Action Icons -->
+                <div class="action-icons">
+                    <button class="icon-btn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a href="#cart" class="icon-btn" aria-label="Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-nav-list">
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+                <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+                <li><a href="#where-to-buy" class="mobile-nav-link">Where to Buy</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-carousel" id="heroCarousel">
+            <!-- Slide 1 -->
+            <div class="hero-slide active" style="background-image: url('images/hero01- Ginger Pineapple Cascade Hops.png')">
+                <div class="hero-content">
+                    <h1 class="hero-title">Natural Original Raw Kombucha</h1>
+                    <p class="hero-description">Our classic original kombucha with pure, natural fermentation.</p>
+                    <div class="hero-price">£24.85</div>
+                    <a href="#shop" class="hero-btn">
+                        Shop Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Navigation -->
+        <button class="carousel-btn carousel-prev" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-btn carousel-next" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Carousel Dots -->
+        <div class="carousel-dots" id="carouselDots">
+            <button class="dot active" data-slide="0"></button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="carousel-progress" id="carouselProgress"></div>
+    </section>
+
+    <!-- Crafted with Purpose Section -->
+    <section id="crafted-purpose" class="crafted-purpose">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Crafted with Purpose</h2>
+                <p class="section-subtitle">Developed during a Masters in Food Science to create the perfect balance of taste, health benefits, and quality you can trust.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon science-backed">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Science-Backed</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon live-probiotics">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Live Probiotics</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon low-sugar">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Low Sugar</h3>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon hand-crafted">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Hand Crafted</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Makes Our Kombucha Special Section -->
+    <section id="what-makes-special" class="what-makes-special">
+        <div class="container">
+            <div class="special-content">
+                <div class="special-text">
+                    <h2 class="section-title">What Makes Our Kombucha Special?</h2>
+                    <p>Twisted Kombucha was developed during my Masters in Food Science, carrying out microbiological, biochemical and analytical testing. After critically analysing kombucha in the laboratory I discovered the functional health benefits of the magical microbes created during fermentation.</p>
+                    
+                    <div class="attributes">
+                        <span class="attribute">100% Natural</span>
+                        <span class="attribute">Raw (Unpasteurised)</span>
+                        <span class="attribute">Vegan (Plant-Based)</span>
+                    </div>
+                </div>
+                
+                <div class="special-illustration">
+                    <div class="infographic">
+                        <div class="ingredient-item">
+                            <div class="ingredient-icon">🫖</div>
+                            <span>Organic Tea</span>
+                        </div>
+                        <div class="ingredient-item">
+                            <div class="ingredient-icon">💧</div>
+                            <span>Filtered Water</span>
+                        </div>
+                        <div class="ingredient-item">
+                            <div class="ingredient-icon">🍯</div>
+                            <span>Organic Cane Sugar</span>
+                        </div>
+                        <div class="ingredient-item">
+                            <div class="ingredient-icon">🦠</div>
+                            <span>SCOBY</span>
+                        </div>
+                        <div class="fermentation">
+                            <div class="fermentation-icon">🫙</div>
+                            <span>Fermented 7-14 days</span>
+                        </div>
+                        <div class="final-product">
+                            <div class="bottle-icon">🥤</div>
+                            <span>Delicious Kombucha</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Traditional Process Section -->
+    <section id="traditional-process" class="traditional-process">
+        <div class="container">
+            <h2 class="section-title">Our Traditional Process</h2>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon brew">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                    <h3>Brew</h3>
+                    <p>Finest tea leaves are brewed to perfection.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon ferment">
+                        <i class="fas fa-bacteria"></i>
+                    </div>
+                    <h3>Ferment</h3>
+                    <p>SCOBY cultures work their magic for weeks.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon flavor">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Flavor</h3>
+                    <p>Natural ingredients create unique taste profiles.</p>
+                </div>
+            </div>
+            
+            <div class="process-result">
+                <p>The result? A tangy, refreshing beverage packed with living nutrition that invigorates your body and delights your senses.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Choose Your Flavor Section -->
+    <section id="choose-flavor" class="choose-flavor">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your Flavor</h2>
+                <p class="section-subtitle">Each bottle is carefully crafted with live cultures and organic ingredients for the perfect balance of taste and wellness.</p>
+            </div>
+            
+            <div class="flavor-carousel" id="flavorCarousel">
+                <div class="flavor-slide active">
+                    <div class="flavor-card pink">
+                        <div class="flavor-image">
+                            <img src="images/product/prod-Ginger-Pineapple-Cascade-Hops.jpg" alt="Ginger, Pineapple & Cascade Hops Kombucha">
+                        </div>
+                        <div class="flavor-info">
+                            <h3>Ginger, Pineapple & Cascade Hops Kombucha</h3>
+                            <p>A refreshing blend with a unique taste experience.</p>
+                            <div class="flavor-price">£24.85</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                            <button class="favorite-btn">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flavor-slide">
+                    <div class="flavor-card purple">
+                        <div class="flavor-image">
+                            <img src="images/product/prod-Hibiscus-Lavender.jpg" alt="Hibiscus & Lavender Kombucha">
+                        </div>
+                        <div class="flavor-info">
+                            <h3>Hibiscus & Lavender Kombucha</h3>
+                            <p>A floral and calming blend perfect for relaxation.</p>
+                            <div class="flavor-price">£24.85</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                            <button class="favorite-btn">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flavor-slide">
+                    <div class="flavor-card orange">
+                        <div class="flavor-image">
+                            <img src="images/product/prod-Strawberry-Hibiscus-Ginger.jpg" alt="Strawberry, Hibiscus & Ginger Kombucha">
+                        </div>
+                        <div class="flavor-info">
+                            <h3>Strawberry, Hibiscus & Ginger Kombucha</h3>
+                            <p>Sweet and tangy blend of natural flavors.</p>
+                            <div class="flavor-price">£24.85</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                            <button class="favorite-btn">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Flavor Carousel Navigation -->
+            <button class="flavor-nav-btn prev" id="flavorPrevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="flavor-nav-btn next" id="flavorNextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Flavor Carousel Dots -->
+            <div class="flavor-dots" id="flavorDots">
+                <button class="flavor-dot active" data-slide="0"></button>
+                <button class="flavor-dot" data-slide="1"></button>
+                <button class="flavor-dot" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Want to Try All Flavors Section -->
+    <section id="try-all-flavors" class="try-all-flavors">
+        <div class="container">
+            <div class="mixed-case-content">
+                <h2>Want to Try All Flavors?</h2>
+                <p>Get our mixed case and discover your favorite kombucha flavor with our variety pack.</p>
+                <div class="mixed-case-buttons">
+                    <button class="btn-primary">Shop Mixed Case</button>
+                    <button class="btn-secondary">Subscribe & Save 10%</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Try Our Delicious Kombucha Today Section -->
+    <section id="try-today" class="try-today">
+        <div class="container">
+            <div class="try-today-content">
+                <h2>Try Our Delicious Kombucha Today</h2>
+                <p>Experience the perfect blend of taste and health benefits with our handcrafted kombucha.</p>
+                <div class="try-today-buttons">
+                    <button class="btn-primary">Shop Now</button>
+                    <button class="btn-secondary">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Promise Section -->
+    <section id="our-promise" class="our-promise">
+        <div class="container">
+            <h2 class="section-title">Our Promise</h2>
+            
+            <div class="promise-grid">
+                <div class="promise-card">
+                    <div class="promise-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Making Healthier Lifestyle</h3>
+                </div>
+                
+                <div class="promise-card">
+                    <div class="promise-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Handcrafted Kombucha</h3>
+                </div>
+                
+                <div class="promise-card">
+                    <div class="promise-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Finest Natural Ingredients</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See what people say about us</h2>
+                <p class="section-subtitle">Testimonials</p>
+            </div>
+            
+            <div class="testimonials-carousel" id="testimonialsCarousel">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Absolutely love the Ginger Pineapple flavor! It's become my daily ritual. The taste is incredible and I feel so much better since starting to drink it regularly."</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Sarah M.</span>
+                            <span class="review-time">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The Natural Original is exactly what I was looking for. Clean, refreshing, and you can taste the quality. My gut health has improved significantly!"</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Michael R.</span>
+                            <span class="review-time">1 week ago</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Strawberry Hibiscus & Ginger is my favorite! The perfect balance of sweet and tangy. I love that it's made with such care and quality ingredients."</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Emma L.</span>
+                            <span class="review-time">3 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonials Navigation -->
+            <button class="testimonial-nav-btn prev" id="testimonialPrevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="testimonial-nav-btn next" id="testimonialNextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Testimonials Dots -->
+            <div class="testimonial-dots" id="testimonialDots">
+                <button class="testimonial-dot active" data-slide="0"></button>
+                <button class="testimonial-dot" data-slide="1"></button>
+                <button class="testimonial-dot" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OTHER</h3>
+                    <ul>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Delivery and Return policy</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Sign-up newsletter</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>BREWERY</h3>
+                    <p>Unit 14, Cooper Road Estate<br>01 Cooper Road<br>London</p>
+                </div>
+                <div class="footer-section">
+                    <h3>OPEN HOURS</h3>
+                    <p>Mon-Fri: 9am - 5pm<br>Sat: Closed<br>Sun: Various markets</p>
+                </div>
+                <div class="footer-section">
+                    <h3>CONTACT US</h3>
+                    <p><i class="fas fa-phone"></i> 020 7123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@twistedkombucha.co.uk</p>
+                    <a href="#" class="trustpilot-link">
+                        <i class="fas fa-star"></i> Trustpilot
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Twisted Kombucha.</p>
+                <p>Designed and Built by <a href="https://paul-banning.com" target="_blank" rel="noopener">Paul Banning</a></p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
