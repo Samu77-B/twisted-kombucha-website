@@ -42,7 +42,7 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" title="Toggle menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -77,16 +77,16 @@
         </div>
 
         <!-- Carousel Navigation -->
-        <button class="carousel-btn carousel-prev" id="prevBtn">
-            <i class="fas fa-chevron-left"></i>
+        <button class="carousel-btn carousel-prev" id="prevBtn" aria-label="Previous slide" title="Previous slide">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
         </button>
-        <button class="carousel-btn carousel-next" id="nextBtn">
-            <i class="fas fa-chevron-right"></i>
+        <button class="carousel-btn carousel-next" id="nextBtn" aria-label="Next slide" title="Next slide">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
         </button>
 
         <!-- Carousel Dots -->
         <div class="carousel-dots" id="carouselDots">
-            <button class="dot active" data-slide="0"></button>
+            <button class="dot active" data-slide="0" aria-label="Go to slide 1" title="Go to slide 1"></button>
         </div>
 
         <!-- Progress Bar -->
@@ -213,8 +213,8 @@
             
             <div class="process-result">
                 <p>The result? A tangy, refreshing beverage packed with living nutrition that invigorates your body and delights your senses.</p>
-            </div>
-        </div>
+                                    </div>
+                                </div>
     </section>
 
     <!-- Choose Your Flavor Section -->
@@ -236,29 +236,29 @@
                             <p>A refreshing blend with a unique taste experience.</p>
                             <div class="flavor-price">£24.85</div>
                             <button class="add-to-cart-btn">Add to Cart</button>
-                            <button class="favorite-btn">
+                            <button class="favorite-btn" aria-label="Toggle favorite" title="Toggle favorite">
                                 <i class="fas fa-heart"></i>
                             </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
+
                 <div class="flavor-slide">
                     <div class="flavor-card purple">
                         <div class="flavor-image">
                             <img src="images/product/prod-Hibiscus-Lavender.jpg" alt="Hibiscus & Lavender Kombucha">
-                        </div>
+                            </div>
                         <div class="flavor-info">
                             <h3>Hibiscus & Lavender Kombucha</h3>
                             <p>A floral and calming blend perfect for relaxation.</p>
                             <div class="flavor-price">£24.85</div>
                             <button class="add-to-cart-btn">Add to Cart</button>
-                            <button class="favorite-btn">
+                            <button class="favorite-btn" aria-label="Toggle favorite" title="Toggle favorite">
                                 <i class="fas fa-heart"></i>
                             </button>
-                        </div>
-                    </div>
-                </div>
+                                    </div>
+                                </div>
+                            </div>
                 
                 <div class="flavor-slide">
                     <div class="flavor-card orange">
@@ -270,7 +270,7 @@
                             <p>Sweet and tangy blend of natural flavors.</p>
                             <div class="flavor-price">£24.85</div>
                             <button class="add-to-cart-btn">Add to Cart</button>
-                            <button class="favorite-btn">
+                            <button class="favorite-btn" aria-label="Toggle favorite" title="Toggle favorite">
                                 <i class="fas fa-heart"></i>
                             </button>
                         </div>
@@ -279,20 +279,137 @@
             </div>
             
             <!-- Flavor Carousel Navigation -->
-            <button class="flavor-nav-btn prev" id="flavorPrevBtn">
-                <i class="fas fa-chevron-left"></i>
+            <button class="flavor-nav-btn prev" id="flavorPrevBtn" aria-label="Previous flavor" title="Previous flavor">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
             </button>
-            <button class="flavor-nav-btn next" id="flavorNextBtn">
-                <i class="fas fa-chevron-right"></i>
+            <button class="flavor-nav-btn next" id="flavorNextBtn" aria-label="Next flavor" title="Next flavor">
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
             </button>
             
             <!-- Flavor Carousel Dots -->
             <div class="flavor-dots" id="flavorDots">
-                <button class="flavor-dot active" data-slide="0"></button>
-                <button class="flavor-dot" data-slide="1"></button>
-                <button class="flavor-dot" data-slide="2"></button>
+                <button class="flavor-dot active" data-slide="0" aria-label="Go to flavor 1" title="Go to flavor 1"></button>
+                <button class="flavor-dot" data-slide="1" aria-label="Go to flavor 2" title="Go to flavor 2"></button>
+                <button class="flavor-dot" data-slide="2" aria-label="Go to flavor 3" title="Go to flavor 3"></button>
             </div>
         </div>
+    </section>
+
+    <!-- Product Tiles Grid (Placeholders) -->
+    <section id="product-tiles" class="product-tiles">
+        <div class="container">
+            <div class="tiles-grid">
+                <a class="tile bg-1" href="#">
+                    <img src="https://placehold.co/400x400" alt="Product placeholder 1">
+                    <div class="tile-caption">Signature Kombucha 1</div>
+                </a>
+                <a class="tile bg-2" href="#">
+                    <img src="https://placehold.co/400x400" alt="Product placeholder 2">
+                    <div class="tile-caption">Signature Kombucha 2</div>
+                </a>
+                <a class="tile bg-3" href="#">
+                    <img src="https://placehold.co/400x400" alt="Product placeholder 3">
+                    <div class="tile-caption">Signature Kombucha 3</div>
+                </a>
+                <a class="tile bg-4" href="#">
+                    <img src="https://placehold.co/400x400" alt="Limited edition placeholder">
+                    <div class="tile-caption">Limited Edition</div>
+                </a>
+                <a class="tile bg-5" href="#">
+                    <img src="https://placehold.co/400x400" alt="Award winning placeholder">
+                    <div class="tile-caption">Award Winner</div>
+                </a>
+                <a class="tile bg-6" href="#">
+                    <img src="https://placehold.co/400x400" alt="Bright flavor placeholder">
+                    <div class="tile-caption">Bright Flavor</div>
+                </a>
+                <a class="tile bg-7" href="#">
+                    <img src="https://placehold.co/400x400" alt="Collection placeholder">
+                    <div class="tile-caption">Variety Case</div>
+                </a>
+                <a class="tile bg-8" href="#">
+                    <img src="https://placehold.co/400x400" alt="Gift set placeholder">
+                    <div class="tile-caption">Gift Set</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Set / About Box (Placeholder) -->
+    <section id="gift-set" class="gift-set">
+        <div class="container gift-set-wrap">
+            <div class="gift-set-media">
+                <img src="https://placehold.co/600x420" alt="Gift set placeholder image">
+            </div>
+            <div class="gift-set-content">
+                <h3>Perfect For Gifting</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique, lacus et semper blandit, purus felis tempus tellus, vel laoreet risus tortor nec mi. Pellentesque habitant morbi tristique.</p>
+                <ul class="gift-points">
+                    <li>Includes selection of our favorite flavors</li>
+                    <li>Beautifully presented and ready to gift</li>
+                    <li>Ships nationwide within 2–3 business days</li>
+                </ul>
+                <div class="gift-actions">
+                    <a href="#" class="btn-primary">Shop Gift Sets</a>
+                    <a href="#" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events (Placeholder) -->
+    <section id="news" class="news">
+        <div class="container news-wrap">
+            <article class="news-card">
+                <img src="https://placehold.co/640x360" alt="Market news placeholder">
+                <div class="news-body">
+                    <h4>We’re at Borough Market this weekend</h4>
+                    <p>Join us for tastings, talks, and special bundles. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn-secondary">Read More</a>
+                </div>
+            </article>
+            <article class="news-card">
+                <img src="https://placehold.co/640x360" alt="Brew room update placeholder">
+                <div class="news-body">
+                    <h4>Inside the Brew Room: Autumn Update</h4>
+                    <p>From new ferments to seasonal releases. Donec id dictum nibh. Sed sed lobortis nulla, non vestibulum orci.</p>
+                    <a href="#" class="btn-secondary">Read More</a>
+                </div>
+            </article>
+                            </div>
+    </section>
+
+    <!-- Marketing Banner (Placeholder) -->
+    <section class="marketing-banner">
+        <div class="container">
+            <div class="banner-inner">
+                <h3>Drink Better. Feel Better.</h3>
+                <p>Crafted in small batches with organic ingredients and live cultures.</p>
+                <a href="#" class="btn-primary">Explore Range</a>
+                                        </div>
+                                        </div>
+    </section>
+
+    <!-- Certifications Strip (Placeholder) -->
+    <section class="certifications">
+        <div class="container cert-strip">
+            <img src="https://placehold.co/120x80?text=Organic" alt="Organic certification placeholder">
+            <img src="https://placehold.co/120x80?text=Vegan" alt="Vegan certification placeholder">
+            <img src="https://placehold.co/120x80?text=Recyclable" alt="Recyclable certification placeholder">
+            <img src="https://placehold.co/120x80?text=Award" alt="Award badge placeholder">
+                                        </div>
+    </section>
+
+    <!-- Gallery (Placeholder) -->
+    <section class="gallery">
+        <div class="container gallery-grid">
+            <img src="https://placehold.co/300x220" alt="Gallery placeholder 1">
+            <img src="https://placehold.co/300x220" alt="Gallery placeholder 2">
+            <img src="https://placehold.co/300x220" alt="Gallery placeholder 3">
+            <img src="https://placehold.co/300x220" alt="Gallery placeholder 4">
+            <img src="https://placehold.co/300x220" alt="Gallery placeholder 5">
+            <img src="https://placehold.co/300x220" alt="Gallery placeholder 6">
+                                        </div>
     </section>
 
     <!-- Want to Try All Flavors Section -->
@@ -304,9 +421,9 @@
                 <div class="mixed-case-buttons">
                     <button class="btn-primary">Shop Mixed Case</button>
                     <button class="btn-secondary">Subscribe & Save 10%</button>
-                </div>
-            </div>
-        </div>
+                                        </div>
+                                    </div>
+                                </div>
     </section>
 
     <!-- Try Our Delicious Kombucha Today Section -->
@@ -318,9 +435,9 @@
                 <div class="try-today-buttons">
                     <button class="btn-primary">Shop Now</button>
                     <button class="btn-secondary">Learn More</button>
-                </div>
-            </div>
-        </div>
+                            </div>
+                        </div>
+                    </div>
     </section>
 
     <!-- Our Promise Section -->
@@ -332,25 +449,25 @@
                 <div class="promise-card">
                     <div class="promise-icon">
                         <i class="fas fa-heart"></i>
-                    </div>
+                            </div>
                     <h3>Making Healthier Lifestyle</h3>
-                </div>
+                                        </div>
                 
                 <div class="promise-card">
                     <div class="promise-icon">
                         <i class="fas fa-leaf"></i>
-                    </div>
+                                        </div>
                     <h3>Handcrafted Kombucha</h3>
-                </div>
+                                        </div>
                 
                 <div class="promise-card">
                     <div class="promise-icon">
                         <i class="fas fa-star"></i>
-                    </div>
+                                        </div>
                     <h3>Finest Natural Ingredients</h3>
-                </div>
-            </div>
-        </div>
+                                        </div>
+                                    </div>
+                                </div>
     </section>
 
     <!-- Testimonials Section -->
@@ -375,10 +492,10 @@
                         <div class="testimonial-author">
                             <span class="author-name">Sarah M.</span>
                             <span class="review-time">2 days ago</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
+
                 <div class="testimonial-slide">
                     <div class="testimonial-card">
                         <div class="stars">
@@ -387,14 +504,14 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                        </div>
+                            </div>
                         <p>"The Natural Original is exactly what I was looking for. Clean, refreshing, and you can taste the quality. My gut health has improved significantly!"</p>
                         <div class="testimonial-author">
                             <span class="author-name">Michael R.</span>
                             <span class="review-time">1 week ago</span>
-                        </div>
-                    </div>
-                </div>
+                                    </div>
+                                </div>
+                            </div>
                 
                 <div class="testimonial-slide">
                     <div class="testimonial-card">
@@ -415,18 +532,18 @@
             </div>
             
             <!-- Testimonials Navigation -->
-            <button class="testimonial-nav-btn prev" id="testimonialPrevBtn">
-                <i class="fas fa-chevron-left"></i>
+            <button class="testimonial-nav-btn prev" id="testimonialPrevBtn" aria-label="Previous testimonial" title="Previous testimonial">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
             </button>
-            <button class="testimonial-nav-btn next" id="testimonialNextBtn">
-                <i class="fas fa-chevron-right"></i>
+            <button class="testimonial-nav-btn next" id="testimonialNextBtn" aria-label="Next testimonial" title="Next testimonial">
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
             </button>
             
             <!-- Testimonials Dots -->
             <div class="testimonial-dots" id="testimonialDots">
-                <button class="testimonial-dot active" data-slide="0"></button>
-                <button class="testimonial-dot" data-slide="1"></button>
-                <button class="testimonial-dot" data-slide="2"></button>
+                <button class="testimonial-dot active" data-slide="0" aria-label="Go to testimonial 1" title="Go to testimonial 1"></button>
+                <button class="testimonial-dot" data-slide="1" aria-label="Go to testimonial 2" title="Go to testimonial 2"></button>
+                <button class="testimonial-dot" data-slide="2" aria-label="Go to testimonial 3" title="Go to testimonial 3"></button>
             </div>
         </div>
     </section>
@@ -466,9 +583,9 @@
                 <p>© 2023 Twisted Kombucha.</p>
                 <p>Designed and Built by <a href="https://paul-banning.com" target="_blank" rel="noopener">Paul Banning</a></p>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
